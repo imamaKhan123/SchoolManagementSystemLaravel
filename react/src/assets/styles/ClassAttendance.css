@@ -1,0 +1,112 @@
+/* ClassAttendance.css */
+
+/* Overall container for the attendance page */
+.attendance-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling the input for selecting date */
+  .date-input {
+    margin-bottom: 20px;
+  }
+  
+  .date-input label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .date-picker {
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  /* Styling the form */
+  .attendance-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .student-item {
+    margin-bottom: 15px;
+  }
+  
+  .student-label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  .attendance-options {
+    margin-top: 5px;
+  }
+  
+  .attendance-options input {
+    margin-right: 10px;
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    background-color: #5b08a7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #5b08a7;
+  }
+  
+  /* Message display */
+  .message {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #007bff;
+  }
+  
+  /* Error message styling */
+  .message.error {
+    color: #dc3545;
+  }
+  /* ClassAttendance.css */
+
+/* Additional styling for controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .class-select label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .class-dropdown {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

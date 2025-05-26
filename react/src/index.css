@@ -1,0 +1,483 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* src/index.css */
+@import './assets/styles/tailwind.css';
+
+* {
+    box-sizing: border-box;
+}
+html, body, #root, #defaultLayout, #guestLayout {
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #212121;
+    background-color: #f6f6f6;
+}
+
+input {
+    outline: 0;
+    background: #ffffff;
+    width: 100%;
+    border: 2px solid #e6e6e6;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: #5b08a7;
+}
+
+.btn,
+.btn-add,
+.btn-edit,
+.btn-delete {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #5b08a7;
+    border: 0;
+    text-decoration: none;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 16px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-add,
+.btn-edit,
+.btn-delete{
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.btn-add {
+    background-color: #00a762;
+}
+.btn-delete {
+    background-color: #b72424;
+}
+
+.btn-logout {
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    color: #212121;
+    transition: all 0.3s;
+    border-radius: 6px;
+}
+.btn-logout:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    background: #5b08a7;
+}
+
+.text-center {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+table > thead > tr > th {
+    text-align: left;
+    padding: 0.5rem 0.5rem;
+    background-color: #efefef;
+}
+
+table > tbody > tr > td {
+    padding: 0.5rem 0.5rem;
+    border-bottom: 1px solid #efefef;
+    white-space: nowrap;
+}
+
+.card {
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+.alert {
+    padding: 1rem;
+    background-color: #ff4040;
+    color: white;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.notification {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 100;
+    padding: 1rem 1.5rem;
+    background-color: #00a762;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+/* Login/Signup forms*/
+
+.login-signup-form {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-signup-form .form {
+    width: 360px;
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    padding: 34px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.login-signup-form .title {
+    font-size: 20px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login-signup-form .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 16px;
+    text-align: center;
+}
+
+.login-signup-form .form .message a {
+    color: #5b08a7;
+    text-decoration: none;
+}
+
+/* Login/Signup form */
+
+
+#defaultLayout {
+    display: flex;
+}
+
+#defaultLayout aside {
+    width: 240px;
+    background-color: #5b08a7;
+    padding: 1rem
+}
+
+#defaultLayout aside > a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+#defaultLayout aside > a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#defaultLayout .content {
+    flex: 1;
+}
+
+#defaultLayout header {
+    height: 80px;
+    padding: 2rem 3rem;
+    background-color: white;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#defaultLayout main {
+    padding: 2rem;
+}
+
+.animated {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ /* Style the select dropdown */
+ .custom-select {
+    appearance: none; /* Remove default browser styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f8f9fa; /* Light background */
+    border: 1px solid #ced4da; /* Bootstrap-like border */
+    border-radius: 0.375rem; /* Rounded corners */
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem; /* Padding */
+    font-size: 1rem; /* Standard font size */
+    color: #495057; /* Bootstrap default text color */
+    width: 100%; /* Full width */
+    margin-bottom: 2%;
+    outline: none; /* Remove focus outline */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"%3E%3Cpath fill="%2394959c" d="M2 0L0 2h4zm0 5L0 3h4z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 0.65em auto;
+    cursor: pointer;
+  }
+
+  /* On hover */
+  .custom-select:hover {
+    border-color: #80bdff; /* Bootstrap hover border */
+  }
+
+  /* On focus */
+  .custom-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Bootstrap focus shadow */
+  }
+
+  /* Disabled state */
+  .custom-select:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+  }
+
+
+
+  /* General container for the messages page */
+.messages-page {
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+  }
+  
+  /* Title */
+  .messages-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Dropdown container for receiver selection */
+  .dropdown-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Receiver select dropdown */
+  .receiver-select {
+    padding: 10px;
+    border: 2px solid #e6e6e6;
+    border-radius: 1px;
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  /* Message list */
+  .message-list {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Individual message */
+  .message {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 75%;
+    margin-left: auto;
+  }
+  
+  .message.received {
+    background-color: #f1f1f1;
+    text-align: left;
+  }
+  
+  .message.sent {
+    background-color: #4caf50;
+    color: white;
+    margin-left: auto;
+    text-align: right;
+  }
+  
+  .message-sender {
+    font-weight: 600;
+    font-size: 16px;
+    color: #5b08a7;
+  }
+  .message-text{
+    color: #100e13;
+  }
+  .message-time {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  /* Message textarea for typing messages */
+  .message-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+  }
+  
+  /* Send button container */
+  .send-button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Send button styling */
+  .send-button {
+    padding: 12px 20px;
+    background-color: #5b08a7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .send-button:focus {
+    outline: none;
+  }
+  .assignment-item {
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333; /* Text color */
+    text-decoration: none;
+    border-bottom: 1px solid transparent; /* Initial underline style */
+    transition: all 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .assignment-item:hover {
+    color: #5b08a7; /* Change text color on hover */
+    border-bottom: 1px solid #5b08a7; /* Add an underline on hover */
+    background-color: #f8f9fa; /* Light background on hover */
+  }
+  .grade-input-container {
+    display: flex;
+    flex-direction: column; /* Arrange label and input vertically */
+    align-items: flex-start; /* Align content to the start of the container */
+    margin: 15px 0; /* Add spacing around the container */
+  }
+  
+  .grade-input-container label {
+    font-size: 16px; /* Label font size */
+    color: #333; /* Label text color */
+    margin-bottom: 5px; /* Space between label and input */
+  }
+  
+  .grade-input-container input {
+    padding: 8px 10px; /* Input padding for better appearance */
+    font-size: 14px; /* Input font size */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 4px; /* Rounded corners */
+    width: 100px; /* Set a fixed width for the input */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight inner shadow */
+    transition: border-color 0.3s ease; /* Smooth transition for border on focus */
+  }
+  
+  .grade-input-container input:focus {
+    border-color: #5b08a7; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  .feedback-container {
+    display: flex;
+    flex-direction: column; /* Arrange label and textarea vertically */
+    align-items: flex-start; /* Align content to the start of the container */
+    margin: 15px 0; /* Add spacing around the container */
+  }
+  
+  .feedback-container label {
+    font-size: 16px; /* Label font size */
+    color: #333; /* Label text color */
+    margin-bottom: 5px; /* Space between label and textarea */
+  }
+  
+  .feedback-container textarea {
+    width: 100%; /* Full width of the container */
+    max-width: 500px; /* Limit maximum width */
+    height: 100px; /* Set a default height */
+    padding: 10px; /* Padding inside the textarea */
+    font-size: 14px; /* Text size */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 4px; /* Rounded corners */
+    resize: vertical; /* Allow vertical resizing only */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Slight inner shadow */
+    transition: border-color 0.3s ease; /* Smooth transition for border on focus */
+  }
+  
+  .feedback-container textarea:focus {
+    border-color: #5b08a7; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+  }
+  .show-grade {
+    margin-top: 10px;
+    color: #5b08a7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f8f5;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d4edda;
+}
+
+.show-grade p {
+    margin: 0;
+}
